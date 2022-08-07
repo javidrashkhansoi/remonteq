@@ -328,30 +328,14 @@ body.lock {
     height: calc(31px + 10 * ((100vw - 320px) / 448));
   }
 }
-.header__phone {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.1666666667;
-  color: #303031;
-  transition: color 0.3s;
-  white-space: nowrap;
-}
 @media (max-width: 992px) {
   .header__phone {
     top: calc(5px + 4 * ((100vw - 320px) / 672));
   }
 }
 @media (max-width: 767px) {
-  .header__phone {
+  .header__phone.phone, .header__phone.phone_white {
     font-size: 0;
-  }
-}
-.header__phone a:focus {
-  color: #fd883f;
-}
-@media (any-hover: hover) {
-  .header__phone a:hover {
-    color: #fd883f;
   }
 }
 @media (min-width: 769px) {
@@ -425,33 +409,6 @@ body.lock {
 }
 .logo-ibg svg [fill="#303031"] {
   transition: fill 0.3s;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-}
-.social__item {
-  transition: color 0.3s;
-}
-.social__item:not(:last-child) {
-  margin-right: 30px;
-}
-.social__item:focus {
-  color: #fd883f;
-}
-@media (any-hover: hover) {
-  .social__item:hover {
-    color: #fd883f;
-  }
-}
-.social__item_whatsapp {
-  font-size: 26px;
-  color: #3eb108;
-}
-.social__item_telegram {
-  font-size: 22px;
-  color: #26a5cd;
 }
 
 @media (max-width: 1480px) and (min-width: 993px) {
@@ -1098,6 +1055,179 @@ body.lock {
   scroll-snap-align: center center;
 }
 
+.footer {
+  background-color: #303031;
+  padding: 39px 0 33px;
+}
+.footer__top {
+  border-bottom: 1px solid rgba(153, 153, 153, 0.2);
+  padding-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .footer__row {
+    display: flex;
+  }
+}
+.footer__info {
+  flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .footer__info {
+    margin-right: 127px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1480px) {
+  .footer__info {
+    margin-right: 57px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__info {
+    margin-bottom: 42px;
+  }
+}
+.footer__logo {
+  margin-bottom: 24px;
+}
+.footer__phone {
+  margin-bottom: 32px;
+}
+@media (max-width: 550px) {
+  .footer__phone {
+    margin-bottom: 30px;
+  }
+}
+.footer__social {
+  margin-bottom: 38px;
+}
+@media (max-width: 550px) {
+  .footer__social {
+    margin-bottom: 32px;
+  }
+}
+.footer__bottom {
+  padding-top: 32px;
+}
+.footer__bottom .footer__row {
+  align-items: center;
+}
+.footer__copy {
+  font-size: 15px;
+  line-height: 1.1333333333;
+  color: #d0d0d0;
+}
+@media (min-width: 768px) {
+  .footer__copy {
+    margin-right: 34px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .footer__copy {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__copy {
+    margin-bottom: 12px;
+  }
+}
+.footer__policy {
+  display: block;
+  font-size: 15px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: #d0d0d0;
+  transition: color 0.3s;
+}
+.footer__policy:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .footer__policy:hover {
+    color: #fd883f;
+  }
+}
+@media (min-width: 1201px) {
+  .footer__policy {
+    margin-right: 51px;
+  }
+}
+.footer__mail {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.9444444444;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+.footer__mail:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .footer__mail:hover {
+    color: #fd883f;
+  }
+}
+@media (max-width: 1200px) {
+  .footer__mail {
+    display: none;
+  }
+}
+
+.logo-footer__image-ibg {
+  width: 152px;
+  height: 29px;
+}
+.logo-footer__image-ibg img {
+  object-fit: contain;
+}
+
+.nav-footer {
+  flex-grow: 1;
+}
+@media (min-width: 551px) {
+  .nav-footer__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 33px;
+    column-gap: 25px;
+  }
+}
+@media (min-width: 551px) and (max-width: 1200px) {
+  .nav-footer__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .nav-footer__item:not(:last-child) {
+    margin-bottom: 33px;
+  }
+}
+.nav-footer__link {
+  display: inline-block;
+  margin-bottom: 21px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.46;
+  color: #d0d0d0;
+}
+.footer-sublist__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.footer-sublist__link {
+  font-size: 18px;
+  line-height: 1.3888888889;
+  color: #d0d0d0;
+  transition: color 0.3s;
+}
+.footer-sublist__link:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .footer-sublist__link:hover {
+    color: #fd883f;
+  }
+}
+
 .button {
   position: relative;
   display: flex;
@@ -1155,6 +1285,55 @@ body.lock {
 .button span::before, .button span::after {
   right: 0;
   bottom: 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+.social__item {
+  transition: color 0.3s;
+}
+.social__item:not(:last-child) {
+  margin-right: 30px;
+}
+.social__item:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .social__item:hover {
+    color: #fd883f;
+  }
+}
+.social__item_whatsapp {
+  font-size: 26px;
+  color: #3eb108;
+}
+.social__item_telegram {
+  font-size: 22px;
+  color: #26a5cd;
+}
+
+.phone, .phone_white {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  color: #303031;
+  white-space: nowrap;
+}
+.phone_white {
+  color: #ffffff;
+}
+.phone a, .phone_white a {
+  transition: color 0.3s;
+}
+.phone a:focus, .phone_white a:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .phone a:hover, .phone_white a:hover {
+    color: #fd883f;
+  }
 }
 
 .popup-close {
@@ -1410,6 +1589,12 @@ body.lock {
 .form-call-popup__button {
   margin: 0 12px;
   margin-bottom: 57px;
+}
+@media (max-width: 768px) {
+  .form-call-popup__button {
+    max-width: fit-content;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 1480px) {
   .form-call-popup__button {
