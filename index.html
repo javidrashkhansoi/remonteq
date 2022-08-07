@@ -61,7 +61,7 @@
 			<div class="header__search">
 				<button data-popup-show="#search-popup" class="icon-search"></button>
 			</div>
-			<a data-popup-show="#call-popup" data-da=".nav-header,767,2" href="#" class="header__button button"><span>Вызов замерщика</span></a>
+			<a data-popup-show="#order-popup" data-da=".nav-header,767,2" href="#" class="header__button button"><span>Вызов замерщика</span></a>
 		</div>
 	</div>
 	<div data-da=".nav-header,992,0" class="header-sublists">
@@ -192,8 +192,9 @@
 		<button type="submit" class="form-search-popup__button icon-search"></button>
 	</form>
 </div>
-<div data-popup id="call-popup" class="call-popup">
+<div data-popup id="order-popup" class="call-popup">
 	<button class="popup-close"></button>
+	
 	<div class="call-popup__image">
 		<div class="call-popup__image-ibg">
 			<img src="img/images/pop-up/call/6afcf1fac6bd2ecf8bf77ca1c4f3e5d3.png" alt="Pop-up image" width="1920" height="230">
@@ -203,6 +204,7 @@
 			<span class="image-text__under">при заказе с сайта</span>
 		</div>
 	</div>
+	
 	<div class="call-popup__form">
 		<form action="#" class="form-call-popup" id="form-call-popup">
 			<div class="form-call-popup__title title">
@@ -229,7 +231,22 @@
 	</div>
 </div>
 		<main class="main">
-			
+			<div class="main__banner banner">
+	<div class="circle-decor"></div>
+	<div class="banner__container">
+		<div class="banner__row">
+			<!-- <div class="banner__content"> -->
+				<div class="banner__title">Ремонт</div>
+				<a href="" class="banner__button button_dark"><span>Все услуги</span></a>
+			<!-- </div> -->
+			<div class="banner__categories">
+				<div class="banner__category">квартиры</div>
+				<div class="banner__category">частные дома</div>
+				<div class="banner__category">офисы</div>
+			</div>
+		</div>
+	</div>
+</div>
 		</main>
 		<footer class="footer">
 	<div class="footer__top">
@@ -251,7 +268,7 @@
 						</div>
 					</div>
 					<div class="footer__button">
-						<button class="button"><span>Заказать звонок</span></button>
+						<button data-popup-show="#call-popup" class="button"><span>Заказать звонок</span></button>
 					</div>
 				</div>
 				<nav class="footer__nav nav-footer">
@@ -357,6 +374,34 @@
 		</div>
 	</div>
 </footer>
+<div data-popup id="call-popup" class="call-popup">
+	<button class="popup-close"></button>
+	
+	<div class="call-popup__form">
+		<form action="#" class="form-call-popup" id="form-call-popup">
+			<div class="form-call-popup__title title">
+				<span class="title__over">бесплатно</span>
+				Звонок
+				<span class="title__under">заказать</span>
+			</div>
+			<div class="form-call-popup__inputs">
+				<div class="form-call-popup__input">
+					<input type="text" name="name" id="name" placeholder="Ваше имя">
+				</div>
+				<div class="form-call-popup__input">
+					<input type="tel" name="phone" id="phone" placeholder="Телефон">
+				</div>
+			</div>
+			<div class="form-call-popup__image-ibg">
+				<img src="img/images/ui/aa81d37cd21ba1c1e946df044bc96f6f.png" alt="reCaptcha" width="331" height="81">
+			</div>
+			<button type="submit" class="form-call-popup__button button"><span>Заказать звонок</span></button>
+			<div class="form-call-popup__policy policy">
+				Нажимая кнопку “Вызвать замерщика”, <br>я соглашаюсь с <a href="#" target="_blank" class="policy__link icon-arrow-more"><span>политикой персональных данных</span></a>
+			</div>
+		</form>
+	</div>
+</div>
 	</div>
 	<script src="js/script.min.js"></script>
 </body>
