@@ -767,7 +767,7 @@ body.lock {
   color: #999999;
 }
 .sub-list__link.active::before {
-  transform: translateY(-50%) rotate(180deg);
+  transform: rotate(180deg);
 }
 @media (min-width: 993px) {
   .sub-list__link {
@@ -776,8 +776,9 @@ body.lock {
 }
 @media (max-width: 992px) {
   .sub-list__link {
-    position: relative;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #fd883f;
     transition: color 0.3s;
     cursor: pointer;
@@ -792,12 +793,10 @@ body.lock {
   }
 }
 .sub-list__link::before {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  margin-left: 5px;
   font-size: 6px;
   transition: transform 0.3s;
-  transform: translateY(-50%);
+  order: 1;
 }
 @media (min-width: 993px) {
   .sub-list__link::before {
@@ -1206,6 +1205,11 @@ body.lock {
   }
   .search-popup__form {
     margin: auto;
+  }
+}
+@media (max-width: 992px) {
+  .search-popup .popup-close {
+    display: none;
   }
 }
 
