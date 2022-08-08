@@ -557,28 +557,6 @@ body.lock {
     overflow-y: auto;
     overflow-x: hidden;
   }
-}
-@media (min-width: 993px) and (min-width: 993px) {
-  .header-sublists {
-    padding-top: 128px;
-  }
-}
-@media (min-width: 993px) and (min-width: 993px) and (max-width: 1480px) {
-  .header-sublists {
-    padding-top: calc(90px + 38 * ((100vw - 320px) / 1160));
-  }
-}
-@media (min-width: 993px) and (max-width: 992px) {
-  .header-sublists {
-    padding-top: 90px;
-  }
-}
-@media (min-width: 993px) and (max-width: 767px) {
-  .header-sublists {
-    padding-top: 54px;
-  }
-}
-@media (min-width: 993px) {
   .header-sublists::before {
     content: "";
     position: absolute;
@@ -612,7 +590,6 @@ body.lock {
 @media (min-width: 993px) {
   .header-sublists > * {
     display: none;
-    padding: 48px 0;
   }
   .header-sublists > *.show {
     display: block;
@@ -624,6 +601,16 @@ body.lock {
   }
 }
 
+@media (min-width: 993px) {
+  .sub-list {
+    padding-top: 176px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1480px) {
+  .sub-list {
+    padding-top: calc(138px + 38 * ((100vw - 320px) / 1160));
+  }
+}
 @media (max-width: 992px) {
   .sub-list {
     max-height: 5000em;
@@ -1241,6 +1228,7 @@ body.lock {
   font-size: 18px;
   line-height: 1.1666666667;
   color: var(--button-color, #fd883f);
+  white-space: nowrap;
 }
 .button:focus::before, .button_dark:focus::before,
 .button:focus span::before,
@@ -1878,7 +1866,6 @@ body.lock {
 }
 @media (max-width: 1480px) {
   .banner__button {
-    white-space: nowrap;
     margin-left: calc(53px + 35 * ((100vw - 768px) / 712));
   }
 }
