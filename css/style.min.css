@@ -1945,14 +1945,6 @@ body.lock {
     display: none;
   }
 }
-.slider-offer__image-ibg img {
-  object-position: 0 100%;
-}
-@media (max-width: 1480px) {
-  .slider-offer__image-ibg img {
-    object-position: 30% 100%;
-  }
-}
 .slider-offer__info {
   height: 100%;
 }
@@ -2245,7 +2237,11 @@ body.lock {
   grid-area: image-5;
 }
 .info-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   max-width: 505px;
+  height: 100%;
   padding: 102px 75px;
 }
 @media (min-width: 768px) {
@@ -2290,6 +2286,7 @@ body.lock {
   color: #000000;
 }
 .info-section__text {
+  flex-grow: 1;
   margin-bottom: 67px;
   font-size: 18px;
   line-height: 1.1666666667;
