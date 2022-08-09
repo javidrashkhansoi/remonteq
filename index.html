@@ -188,7 +188,7 @@
 <div data-da=".nav-header,992,last" data-popup id="search-popup" class="search-popup">
 	<button class="popup-close"></button>
 	<form action="#" class="search-popup__form form-search-popup" id="form-search-popup">
-		<input type="text" name="search" id="search" class="form-search-popup__input" placeholder="Например, капитальный ремонт">
+		<input type="text" name="form-search-popup-search" id="form-search-popup-search" class="form-search-popup__input" placeholder="Например, капитальный ремонт">
 		<button type="submit" class="form-search-popup__button icon-search"></button>
 	</form>
 </div>
@@ -206,21 +206,21 @@
 	</div>
 	
 	<div class="call-popup__form">
-		<form action="#" class="form-call-popup" id="form-call-popup">
+		<form action="#" class="form-call-popup" id="form-order-popup">
 			<div class="form-call-popup__title title">
 				<span class="title__over">бесплатно</span>
 				Вызов
 				<span class="title__under">замерщика</span>
 			</div>
-			<div class="form-call-popup__inputs">
-				<div class="form-call-popup__input">
-					<input type="text" name="name" id="name" placeholder="Ваше имя">
+			<div class="form-call-popup__inputs form-inputs">
+				<div class="form-call-popup__input form-input">
+					<input type="text" name="form-order-popup-name" id="form-order-popup-name" placeholder="Ваше имя">
 				</div>
-				<div class="form-call-popup__input">
-					<input type="tel" name="phone" id="phone" placeholder="Телефон">
+				<div class="form-call-popup__input form-input">
+					<input type="tel" name="form-order-popup-phone" id="form-order-popup-phone" placeholder="Телефон">
 				</div>
 			</div>
-			<div class="form-call-popup__image-ibg">
+			<div class="form-call-popup__image-ibg form-captcha">
 				<img src="img/images/ui/aa81d37cd21ba1c1e946df044bc96f6f.png" alt="reCaptcha" width="331" height="81">
 			</div>
 			<button type="submit" class="form-call-popup__button button"><span>Вызвать замерщика</span></button>
@@ -232,7 +232,7 @@
 </div>
 		<main class="main">
 			<div class="main__banner banner">
-	<div class="circle-decor"></div>
+	<div class="banner__circle-decor circle-decor"></div>
 	<div class="banner__container">
 		<div class="banner__row">
 			<!-- <div class="banner__content"> -->
@@ -418,6 +418,72 @@
 		</div>
 	</div>
 </div>
+			<div class="main__calculate-section calculate-section">
+	<div class="calculate-section__circle-decor circle-decor"></div>
+	<div class="calculate-section__container">
+		<div class="calculate-section__title title_dark">
+			<span class="title__over">предварительный</span>
+			Расчет
+		</div>
+		<form action="#" class="calculate-section__form form-calculate" id="form-calculate">
+			<div class="form-calculate__left">
+				<div class="form-calculate__radio">
+					<div class="form-calculate__label">Вид ремонта</div>
+					<div class="form-calculate__radio-item">
+						<input type="radio" name="form-calculate-radio" id="form-calculate-radio-1" value="Черновой">
+						<label for="form-calculate-radio-1">Черновой</label>
+					</div>
+					<div class="form-calculate__radio-item">
+						<input type="radio" name="form-calculate-radio" id="form-calculate-radio-2" value="Косметический">
+						<label for="form-calculate-radio-2">Косметический</label>
+					</div>
+					<div class="form-calculate__radio-item">
+						<input checked="checked" type="radio" name="form-calculate-radio" id="form-calculate-radio-3" value="Капитальный">
+						<label for="form-calculate-radio-3">Капитальный</label>
+					</div>
+					<div class="form-calculate__radio-item">
+						<input type="radio" name="form-calculate-radio" id="form-calculate-radio-4" value="Дизайнерский">
+						<label for="form-calculate-radio-4">Дизайнерский</label>
+					</div>
+				</div>
+				<div class="form-calculate__range">
+					<div class="form-calculate__range-item">
+						<div class="form-calculate__label_mb15">Площадь квартиры, м<sup>2</sup></div>
+						<div class="form-calculate__range-row">
+							<input type="number" name="form-calculate-range-aria-input" id="form-calculate-range-aria-input" value="150" min="20" max="500" step="5">
+							<input type="range" name="form-calculate-aria-range" id="form-calculate-aria-range" min="20" max="500" step="5" value="150">
+						</div>
+					</div>
+					<div class="form-calculate__range-item">
+						<div class="form-calculate__label_mb15">Количество комнат</div>
+						<div class="form-calculate__range-row">
+							<input type="number" name="form-calculate-range-room-input" id="form-calculate-range-room-input" value="3" min="1" max="6" step="1">
+							<input type="range" name="form-calculate-room-range" id="form-calculate-room-range" min="1" max="6" step="1" value="3">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-calculate__right">
+				<div class="form-calculate__inputs form-inputs">
+					<div class="form-calculate__input form-input">
+						<input type="text" name="form-calculate-name" id="form-calculate-name" placeholder="Ваше имя">
+					</div>
+					<div class="form-calculate__input form-input">
+						<input type="tel" name="form-calculate-tel" id="form-calculate-tel" placeholder="Телефон">
+					</div>
+				</div>
+				<div class="form-calculate__image-ibg form-captcha">
+					<img src="img/images/ui/aa81d37cd21ba1c1e946df044bc96f6f.png" alt="reCaptcha" width="354" height="104">
+				</div>
+				<button type="submit" class="form-calculate__button button"><span>Получить расчет</span></button>
+			</div>
+		</form>
+		<div class="calculate-section__policy">
+			Нажимая кнопку “Вызвать замерщика”,<br> я соглашаюсь с 
+			<a href="#" target="_blank" class="calculate-section__policy-link icon-arrow-more"><span>политикой персональных данных</span></a>
+		</div>
+	</div>
+</div>
 		</main>
 		<footer class="footer">
 	<div class="footer__top">
@@ -555,15 +621,15 @@
 				Звонок
 				<span class="title__under">заказать</span>
 			</div>
-			<div class="form-call-popup__inputs">
-				<div class="form-call-popup__input">
-					<input type="text" name="name" id="name" placeholder="Ваше имя">
+			<div class="form-call-popup__inputs form-inputs">
+				<div class="form-call-popup__input form-input">
+					<input type="text" name="form-call-popup-name" id="form-call-popup-name" placeholder="Ваше имя">
 				</div>
-				<div class="form-call-popup__input">
-					<input type="tel" name="phone" id="phone" placeholder="Телефон">
+				<div class="form-call-popup__input form-input">
+					<input type="tel" name="form-call-popup-phone" id="form-call-popup-phone" placeholder="Телефон">
 				</div>
 			</div>
-			<div class="form-call-popup__image-ibg">
+			<div class="form-call-popup__image-ibg form-captcha">
 				<img src="img/images/ui/aa81d37cd21ba1c1e946df044bc96f6f.png" alt="reCaptcha" width="331" height="81">
 			</div>
 			<button type="submit" class="form-call-popup__button button"><span>Заказать звонок</span></button>
