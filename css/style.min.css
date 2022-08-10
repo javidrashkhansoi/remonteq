@@ -3477,3 +3477,176 @@ body.lock {
   right: 32px;
   transform: rotate(-90deg);
 }
+
+.feedback-section {
+  padding-bottom: 51px;
+}
+.feedback-section__content {
+  display: grid;
+  grid-template-rows: 187px auto;
+  grid-template-columns: minmax(auto, 427px) minmax(auto, 945px);
+  grid-template-areas: "title link" "title slider";
+  column-gap: 66px;
+}
+@media (max-width: 1200px) {
+  .feedback-section__content {
+    grid-template-rows: auto auto 119px;
+    grid-template-areas: "title title" "slider slider" "link link";
+    row-gap: 31px;
+  }
+}
+@media (max-width: 767px) {
+  .feedback-section__content {
+    grid-template-rows: auto auto 71px;
+    row-gap: 27px;
+  }
+}
+.feedback-section__link {
+  --button-padding: 49px;
+  grid-area: link;
+  justify-self: end;
+  align-self: center;
+}
+@media (max-width: 1200px) {
+  .feedback-section__link {
+    justify-self: center;
+  }
+}
+.title-feedback-section {
+  grid-area: title;
+}
+@media (min-width: 768px) {
+  .title-feedback-section {
+    padding: 48px 8px;
+    background: url("../img/images/home/services/logo.svg") left top/contain no-repeat;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .title-feedback-section {
+    padding: 41px 0;
+  }
+}
+.title-feedback-section__content {
+  max-width: fit-content;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2083333333;
+  color: #000000;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .title-feedback-section__content {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .title-feedback-section__content {
+    font-size: calc(36px + 12 * ((100vw - 320px) / 448));
+  }
+}
+.title-feedback-section__label {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  color: #000000;
+}
+
+.slider-feedback-section {
+  grid-area: slider;
+  align-self: start;
+  width: 100%;
+}
+.slider-feedback-section__wrapper {
+  margin-bottom: 18px;
+}
+@media (max-width: 1200px) {
+  .slider-feedback-section__wrapper {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .slider-feedback-section__wrapper {
+    margin-bottom: 32px;
+  }
+}
+.slider-feedback-section__slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 70px 0;
+  font-size: 24px;
+  line-height: 1.46;
+  text-align: center;
+  color: #000000;
+  background: #f7f7f7;
+  padding-right: 120px;
+  padding-left: 120px;
+}
+@media (max-width: 1480px) {
+  .slider-feedback-section__slide {
+    padding-right: calc(61px + 59 * ((100vw - 768px) / 712));
+  }
+}
+@media (max-width: 1480px) {
+  .slider-feedback-section__slide {
+    padding-left: calc(61px + 59 * ((100vw - 768px) / 712));
+  }
+}
+@media (max-width: 767px) {
+  .slider-feedback-section__slide {
+    padding-right: calc(17px + 44 * ((100vw - 320px) / 448));
+    padding-left: calc(17px + 44 * ((100vw - 320px) / 448));
+  }
+}
+.slider-feedback-section__slide::before {
+  position: absolute;
+  top: 33px;
+  left: 31px;
+  font-size: 25px;
+  color: #303031;
+}
+.arrows-slider-feedback-section {
+  display: grid;
+  grid-template-rows: 53px;
+  grid-template-columns: repeat(2, 53px);
+  column-gap: 45px;
+  justify-content: end;
+}
+@media (max-width: 1200px) {
+  .arrows-slider-feedback-section {
+    justify-content: center;
+  }
+}
+.arrows-slider-feedback-section__prev, .arrows-slider-feedback-section__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  background: #f6f6f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrows-slider-feedback-section__prev:focus::before, .arrows-slider-feedback-section__next:focus::before {
+  color: #303031;
+}
+@media (any-hover: hover) {
+  .arrows-slider-feedback-section__prev:hover::before, .arrows-slider-feedback-section__next:hover::before {
+    color: #303031;
+  }
+}
+.arrows-slider-feedback-section__prev::before, .arrows-slider-feedback-section__next::before {
+  position: relative;
+  top: 2px;
+  font-size: 10px;
+  color: #d0d0d0;
+  transition: color 0.3s;
+}
+.arrows-slider-feedback-section__prev {
+  transform: rotate(90deg);
+}
+.arrows-slider-feedback-section__next {
+  transform: rotate(-90deg);
+}
