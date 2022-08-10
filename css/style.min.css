@@ -1344,6 +1344,7 @@ body.lock {
   border: 1px solid #e6e6e6;
   border-radius: 50%;
   animation: decor-circle-rotate 60s infinite linear;
+  pointer-events: none;
 }
 .circle-decor::before {
   content: "";
@@ -1412,6 +1413,10 @@ body.lock {
 .title__under {
   top: 88.7931034483%;
   left: 2.1276595745%;
+}
+.title__under_right {
+  top: 88.7931034483%;
+  right: 2.1276595745%;
 }
 
 .form-inputs {
@@ -1889,6 +1894,7 @@ body.lock {
   }
 }
 .banner__circle-decor {
+  z-index: 2;
   top: 0px;
   right: 432px;
   width: 555px;
@@ -3649,4 +3655,211 @@ body.lock {
 }
 .arrows-slider-feedback-section__next {
   transform: rotate(-90deg);
+}
+
+.consultation-section {
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .consultation-section {
+    padding-bottom: 64px;
+  }
+}
+@media (max-width: 767px) {
+  .consultation-section {
+    padding-bottom: 29px;
+  }
+}
+.consultation-section__circle-decor {
+  z-index: 2;
+  top: auto;
+  right: auto;
+  bottom: -212px;
+  left: -188px;
+  width: 555px;
+  height: 555px;
+}
+@media (max-width: 992px) {
+  .consultation-section__circle-decor {
+    display: none;
+  }
+}
+.consultation-section__circle-decor::before {
+  top: 96px;
+  right: 38px;
+  left: auto;
+  width: 112px;
+  height: 112px;
+}
+.consultation-section__content {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(auto, 720px) minmax(auto, 720px) minmax(20px, 1fr);
+  grid-template-areas: "left form image image" "left empty policy policy";
+}
+@media (max-width: 1200px) {
+  .consultation-section__content {
+    grid-template-areas: "image image image image" "left form form right" "left policy policy right";
+  }
+}
+.consultation-section__form {
+  grid-area: form;
+  padding: 92px 0 23px 0;
+  border-top: 1px solid #d0d0d0;
+}
+@media (min-width: 1201px) {
+  .consultation-section__form {
+    padding-right: 146px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1480px) {
+  .consultation-section__form {
+    padding-right: calc(100px + 46 * ((100vw - 1200px) / 280));
+  }
+}
+@media (max-width: 1200px) {
+  .consultation-section__form {
+    padding: 65px 0 61px 108px;
+  }
+}
+@media (max-width: 767px) {
+  .consultation-section__form {
+    padding: 43px 0 37px;
+  }
+}
+.consultation-section__title {
+  margin-left: auto;
+  margin-bottom: 108px;
+}
+@media (max-width: 1200px) {
+  .consultation-section__title {
+    margin: 0 0 102px;
+  }
+}
+@media (max-width: 767px) {
+  .consultation-section__title {
+    margin: 0 0 97px;
+  }
+}
+@media (max-width: 550px) {
+  .consultation-section__title {
+    margin: 0 auto 97px;
+  }
+}
+.consultation-section__title-under {
+  top: calc(100% + 1px);
+}
+@media (min-width: 768px) {
+  .consultation-section__title-under {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 1200px) {
+  .consultation-section__title-under {
+    right: auto;
+    left: 2.1276595745%;
+  }
+}
+.consultation-section__image-ibg {
+  grid-area: image;
+}
+@media (max-width: 1200px) {
+  .consultation-section__image-ibg {
+    padding-bottom: 41.6666666667%;
+  }
+}
+@media (max-width: 767px) {
+  .consultation-section__image-ibg {
+    padding-bottom: 100%;
+  }
+}
+.consultation-section__policy {
+  grid-area: policy;
+  font-size: 13px;
+  line-height: 1.1538461538;
+  color: #999999;
+}
+@media (min-width: 768px) {
+  .consultation-section__policy {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .consultation-section__policy {
+    padding: 0 0 0 120px;
+  }
+}
+@media (min-width: 1201px) {
+  .consultation-section__policy {
+    min-height: 128px;
+    border-left: 1px solid #d0d0d0;
+  }
+}
+@media (max-width: 650px) {
+  .consultation-section__policy {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 1481px), (max-width: 1200px) {
+  .consultation-section__policy br {
+    display: none;
+  }
+}
+.consultation-section__policy-link {
+  transition: color 0.3s;
+}
+.consultation-section__policy-link:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .consultation-section__policy-link:hover {
+    color: #fd883f;
+  }
+}
+@media (min-width: 651px) {
+  .consultation-section__policy-link {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+.consultation-section__policy-link::before {
+  margin-left: 10px;
+  font-size: 16px;
+  order: 1;
+}
+@media (max-width: 650px) {
+  .consultation-section__policy-link::before {
+    display: none;
+  }
+}
+.consultation-section__policy-link span {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .form-consultation-section {
+    padding-left: 12px;
+  }
+}
+@media (min-width: 1201px) {
+  .form-consultation-section__inputs {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1201px) {
+  .form-consultation-section__image-ibg {
+    margin-left: auto;
+  }
+}
+@media (min-width: 1201px) {
+  .form-consultation-section__button {
+    margin-left: auto;
+  }
+}
+@media (max-width: 550px) {
+  .form-consultation-section__button {
+    margin: 0 auto;
+  }
 }
