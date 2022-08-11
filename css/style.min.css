@@ -1605,6 +1605,11 @@ body.lock {
 .form-section {
   position: relative;
 }
+@media (min-width: 1201px) {
+  .form-section {
+    border-bottom: 1px solid #d0d0d0;
+  }
+}
 @media (max-width: 1200px) {
   .form-section {
     padding-bottom: 64px;
@@ -1650,12 +1655,9 @@ body.lock {
     margin: 0 0 108px;
   }
 }
-.form-section_right .form-section__policy {
-  justify-content: flex-end;
-}
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 1201px) {
   .form-section_right .form-section__policy {
-    padding: 0 120px 0 0;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 1201px) {
@@ -1714,8 +1716,11 @@ body.lock {
 .form-section__form {
   grid-area: form;
   padding: 92px 0 23px 0;
-  border-top: 1px solid #d0d0d0;
-  border-bottom: 1px solid #d0d0d0;
+}
+@media (min-width: 1201px) {
+  .form-section__form {
+    border-top: 1px solid #d0d0d0;
+  }
 }
 @media (min-width: 1201px) {
   .form-section__form {
@@ -4106,4 +4111,32 @@ body.lock {
 .arrows-slider-process-section__next {
   right: -7px;
   transform: rotate(-90deg);
+}
+
+.text-section {
+  padding: 81px 0 53px;
+}
+@media (max-width: 992px) {
+  .text-section {
+    display: none;
+  }
+}
+.text-section__item {
+  max-width: 1103px;
+}
+.text-section__item:not(:last-child) {
+  margin-bottom: 51px;
+}
+.text-section__title {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 0.83;
+  color: #000000;
+}
+.text-section__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5625;
+  color: #000000;
 }
