@@ -1041,6 +1041,15 @@ body.lock {
   scroll-snap-align: center center;
 }
 
+.swiper-grid > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+
+.swiper-grid-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .footer {
   background-color: #303031;
   padding: 39px 0 33px;
@@ -3862,4 +3871,174 @@ body.lock {
   .form-consultation-section__button {
     margin: 0 auto;
   }
+}
+
+.process-section {
+  padding: 50px 0 134px;
+}
+@media (max-width: 1200px) {
+  .process-section {
+    padding: 73px 0 88px;
+  }
+}
+@media (max-width: 767px) {
+  .process-section {
+    padding: 37px 0 44px;
+  }
+}
+.process-section__header {
+  margin-bottom: 78px;
+}
+@media (min-width: 768px) {
+  .process-section__header {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 1200px) {
+  .process-section__header {
+    margin-bottom: 45px;
+  }
+}
+.process-section__title {
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .process-section__title {
+    margin: 0 auto 29px;
+    font-size: calc(55px + 65 * ((100vw - 320px) / 448));
+  }
+}
+.process-section__link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  color: #303031;
+  transition: color 0.3s;
+  margin-bottom: 69px;
+}
+@media (max-width: 1480px) {
+  .process-section__link {
+    margin-bottom: calc(23px + 46 * ((100vw - 768px) / 712));
+  }
+}
+.process-section__link:focus {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .process-section__link:hover {
+    color: #fd883f;
+  }
+}
+@media (max-width: 767px) {
+  .process-section__link {
+    justify-content: center;
+  }
+}
+.process-section__link::before {
+  margin-left: 19px;
+  font-size: 16px;
+  order: 1;
+}
+
+.slider-process-section {
+  position: relative;
+  overflow: visible;
+}
+.slider-process-section__slide {
+  height: auto;
+}
+.slider-process-section__count {
+  position: relative;
+  margin: 0 auto 21px;
+  width: 130px;
+  height: 130px;
+  background: conic-gradient(#303031 var(--graphic-percent, 50%), #d0d0d0 0);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.slider-process-section__count span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #303031;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-process-section__label {
+  display: block;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  color: #303031;
+  text-align: center;
+  transition: color 0.3s;
+}
+.slider-process-section__label:focus {
+  color: #fd883f;
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .slider-process-section__label:hover {
+    color: #fd883f;
+    text-decoration: underline;
+  }
+}
+@media (min-width: 768px) {
+  .arrows-slider-process-section {
+    display: none;
+  }
+}
+.arrows-slider-process-section__prev, .arrows-slider-process-section__next {
+  position: absolute;
+  top: 38.5px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  background: #f6f6f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrows-slider-process-section__prev.swiper-button-disabled, .arrows-slider-process-section__next.swiper-button-disabled {
+  cursor: default;
+}
+.arrows-slider-process-section__prev.swiper-button-disabled::before, .arrows-slider-process-section__next.swiper-button-disabled::before {
+  color: #d0d0d0;
+}
+.arrows-slider-process-section__prev:focus:not(.swiper-button-disabled)::before, .arrows-slider-process-section__next:focus:not(.swiper-button-disabled)::before {
+  color: #fd883f;
+}
+@media (any-hover: hover) {
+  .arrows-slider-process-section__prev:hover:not(.swiper-button-disabled)::before, .arrows-slider-process-section__next:hover:not(.swiper-button-disabled)::before {
+    color: #fd883f;
+  }
+}
+.arrows-slider-process-section__prev::before, .arrows-slider-process-section__next::before {
+  position: relative;
+  top: 2px;
+  font-size: 10px;
+  color: #303031;
+  transition: color 0.3s;
+}
+.arrows-slider-process-section__prev {
+  left: -7px;
+  transform: rotate(90deg);
+}
+.arrows-slider-process-section__next {
+  right: -7px;
+  transform: rotate(-90deg);
 }
