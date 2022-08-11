@@ -1892,6 +1892,11 @@ body.lock {
     padding-bottom: 49px;
   }
 }
+@media (min-width: 993px) {
+  .see-also_services {
+    padding-bottom: 96px;
+  }
+}
 .see-also__title {
   margin-bottom: 69px;
   font-weight: 700;
