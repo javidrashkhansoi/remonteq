@@ -4312,6 +4312,9 @@ body.lock {
     display: none;
   }
 }
+.text-section_services {
+  padding: 0 0 87px;
+}
 .text-section__item {
   max-width: 1103px;
 }
