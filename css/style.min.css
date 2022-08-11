@@ -1715,6 +1715,7 @@ body.lock {
   grid-area: form;
   padding: 92px 0 23px 0;
   border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
 }
 @media (min-width: 1201px) {
   .form-section__form {
