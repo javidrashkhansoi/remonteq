@@ -256,7 +256,7 @@ body.lock {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 -15px;
+  margin: 0 -12.5px;
 }
 @media (min-width: 993px) {
   .header__row {
@@ -272,6 +272,11 @@ body.lock {
 @media (min-width: 993px) and (max-width: 1480px) {
   .header__row {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .header__row {
+    margin: 0 -6.5px;
   }
 }
 .header__row > * {
