@@ -4870,11 +4870,8 @@ body.lock {
   color: #303031;
   text-align: left;
 }
-.spoller-services-questions__title.active span::before {
-  transform: translate(-50%, -50%) rotate(360deg);
-}
 .spoller-services-questions__title.active span::after {
-  transform: translate(-50%, -50%) rotate(450deg);
+  height: 0;
 }
 .spoller-services-questions__title span {
   position: relative;
@@ -4890,7 +4887,6 @@ body.lock {
   top: 50%;
   left: 50%;
   background-color: #303031;
-  transition: 0.3s;
   transform: translate(-50%, -50%);
 }
 .spoller-services-questions__title span::before {
@@ -4900,6 +4896,7 @@ body.lock {
 .spoller-services-questions__title span::after {
   width: 2px;
   height: 100%;
+  transition: height 0.3s;
 }
 .spoller-services-questions__text {
   max-width: 925px;
