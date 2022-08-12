@@ -3830,13 +3830,31 @@ body.lock {
     margin: 0;
   }
 }
+.portfolio-section_case {
+  padding-top: 12px;
+}
 @media (min-width: 1301px) {
   .portfolio-section_case {
-    padding: 0 0 77px;
+    padding: 12px 0 77px;
+  }
+}
+@media (min-width: 1301px) {
+  .portfolio-section_case.portfolio-section_p92 {
+    padding: 12px 0 92px;
   }
 }
 .portfolio-section_case .portfolio-section__title {
   margin-bottom: 47px;
+}
+@media (max-width: 767px) {
+  .portfolio-section_case .portfolio-section__title {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1301px) {
+  .portfolio-section_case .portfolio-section__title_mb64 {
+    margin-bottom: 64px;
+  }
 }
 .portfolio-section_case .slider-portfolio-section {
   margin: 0;
@@ -3847,7 +3865,7 @@ body.lock {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
-    row-gap: 90px;
+    row-gap: 87px;
     column-gap: 43px;
   }
 }
