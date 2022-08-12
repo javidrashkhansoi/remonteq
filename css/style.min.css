@@ -4313,18 +4313,33 @@ body.lock {
   padding: 81px 0 53px;
 }
 @media (max-width: 992px) {
-  .text-section {
+  .text-section:not(.text-section_services) {
     display: none;
   }
 }
 .text-section_services {
   padding: 0 0 87px;
 }
+@media (max-width: 992px) {
+  .text-section_services {
+    padding: 0 0 62px;
+  }
+}
+@media (max-width: 767px) {
+  .text-section_services {
+    display: none;
+  }
+}
 .text-section__item {
   max-width: 1103px;
 }
 .text-section__item:not(:last-child) {
   margin-bottom: 51px;
+}
+@media (max-width: 992px) {
+  .text-section__item:not(:last-child) {
+    margin-bottom: 44px;
+  }
 }
 .text-section__title {
   margin-bottom: 26px;
