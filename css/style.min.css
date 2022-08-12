@@ -4445,14 +4445,18 @@ body.lock {
 @media (min-width: 320px) {
   .order-services-banner__price {
     display: grid;
+    row-gap: 7px;
+  }
+}
+@media (min-width: 401px) {
+  .order-services-banner__price {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "text text right" "left price price";
-    row-gap: 7px;
+    max-width: fit-content;
   }
 }
 @media (max-width: 650px) {
   .order-services-banner__price {
-    max-width: fit-content;
     margin: 0 auto;
   }
 }
@@ -4465,17 +4469,38 @@ body.lock {
     display: block;
     text-align: center;
   }
+  .order-services-banner__price span:not(:last-child) {
+    margin-bottom: 7px;
+  }
 }
 .order-services-banner__price span:nth-child(1) {
-  grid-area: text;
   font-size: 36px;
   line-height: 1.1666666667;
 }
+@media (min-width: 401px) {
+  .order-services-banner__price span:nth-child(1) {
+    grid-area: text;
+  }
+}
+@media (max-width: 400px) {
+  .order-services-banner__price span:nth-child(1) {
+    justify-self: start;
+  }
+}
 .order-services-banner__price span:nth-child(2) {
-  grid-area: price;
   font-weight: 600;
   font-size: 40px;
   line-height: 1.2;
+}
+@media (min-width: 401px) {
+  .order-services-banner__price span:nth-child(2) {
+    grid-area: price;
+  }
+}
+@media (max-width: 400px) {
+  .order-services-banner__price span:nth-child(2) {
+    justify-self: end;
+  }
 }
 
 @media (min-width: 768px) {
