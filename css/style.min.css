@@ -4551,3 +4551,120 @@ body.lock {
   font-size: 20px;
   line-height: 0.9;
 }
+
+.services-about-section {
+  padding: 77px 0 93px;
+}
+@media (max-width: 992px) {
+  .services-about-section {
+    padding: 0 0 48px;
+  }
+}
+@media (max-width: 767px) {
+  .services-about-section {
+    padding: 0 0 56px;
+  }
+}
+@media (min-width: 993px) {
+  .services-about-section__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 528px) 50%;
+    column-gap: 50px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 993px) {
+  .services-about-section__left {
+    padding: 42px 0;
+    background: url("../img/images/home/services/logo.svg") left top/contain no-repeat;
+  }
+}
+@media (max-width: 992px) {
+  .services-about-section__left {
+    margin-bottom: 39px;
+  }
+}
+@media (max-width: 767px) {
+  .services-about-section__left {
+    margin-bottom: 32px;
+  }
+}
+.services-about-section__title {
+  font-size: 40px;
+  line-height: 1.15;
+  color: #000000;
+}
+@media (min-width: 993px) {
+  .services-about-section__title {
+    margin-bottom: 40px;
+    text-align: right;
+  }
+}
+.services-about-section__link {
+  --button-padding: 49px;
+}
+@media (min-width: 993px) {
+  .services-about-section__link {
+    margin-left: auto;
+  }
+}
+@media (min-width: 993px) {
+  .services-about-section__texts {
+    padding: 68px 0 49px;
+  }
+}
+@media (max-width: 992px) {
+  .services-about-section__texts {
+    margin-bottom: 39px;
+  }
+}
+@media (max-width: 767px) {
+  .services-about-section__texts {
+    margin-bottom: 51px;
+  }
+}
+.services-about-section__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5625;
+  color: #000000;
+}
+.services-about-section__text:not(:last-child) {
+  margin-bottom: 29px;
+}
+@media (max-width: 767px) {
+  .services-about-section__hidden {
+    margin-bottom: 29px;
+  }
+}
+.services-about-section__button {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1666666667;
+  color: #fd883f;
+  transition: color 0.3s;
+}
+.services-about-section__button.hide::before {
+  transform: rotate(180deg);
+}
+.services-about-section__button:focus {
+  color: #303031;
+}
+@media (any-hover: hover) {
+  .services-about-section__button:hover {
+    color: #303031;
+  }
+}
+@media (min-width: 768px) {
+  .services-about-section__button {
+    display: none;
+  }
+}
+.services-about-section__button::before {
+  margin-left: 9px;
+  font-size: 6px;
+  transition: transform 0.3s;
+  order: 1;
+}
