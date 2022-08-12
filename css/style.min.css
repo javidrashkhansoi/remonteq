@@ -5175,6 +5175,11 @@ body.lock {
 .services-interested-section__image-ibg {
   padding-bottom: 100%;
 }
+@media (max-width: 767px) {
+  .services-interested-section__image-ibg:not(.services-interested-section__image-ibg:nth-child(-n+3)) {
+    display: none;
+  }
+}
 .services-interested-section__image-ibg a {
   position: absolute;
   bottom: 21px;
