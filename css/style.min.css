@@ -1970,6 +1970,77 @@ body.lock {
   }
 }
 
+.bread-crumb {
+  border-bottom: 3px solid #fd883f;
+}
+@media (min-width: 993px) {
+  .bread-crumb {
+    padding-bottom: 32px;
+  }
+}
+.bread-crumb__row {
+  display: flex;
+  align-items: center;
+  margin: -7.5px;
+  overflow: auto;
+}
+@media (min-width: 993px) {
+  .bread-crumb__row {
+    padding: 0 4px;
+  }
+}
+@media (max-width: 992px) {
+  .bread-crumb__row {
+    min-height: 75px;
+  }
+}
+@media (max-width: 767px) {
+  .bread-crumb__row {
+    min-height: 70px;
+  }
+}
+.bread-crumb__previous {
+  position: relative;
+  padding: 7.5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2142857143;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+.bread-crumb__previous:focus {
+  color: #fd883f;
+}
+.bread-crumb__previous:focus::before {
+  left: 50%;
+  width: 0;
+}
+@media (any-hover: hover) {
+  .bread-crumb__previous:hover {
+    color: #fd883f;
+  }
+  .bread-crumb__previous:hover::before {
+    left: 50%;
+    width: 0;
+  }
+}
+.bread-crumb__previous::before {
+  content: "";
+  position: absolute;
+  bottom: 5.5px;
+  left: 7.5px;
+  width: calc(100% - 15px);
+  height: 1px;
+  background-color: #fd883f;
+  transition: 0.3s;
+}
+.bread-crumb__current {
+  padding: 7.5px;
+  font-size: 14px;
+  line-height: 1.2142857143;
+  white-space: nowrap;
+}
+
 .popup-close {
   position: absolute;
   top: 25px;
