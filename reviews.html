@@ -243,10 +243,11 @@
 	<div class="reviews-title-section__container">
 		<div class="reviews-title-section__row">
 			<div class="reviews-title-section__title orange-title">О нас говорят</div>
-			<button data-da=".reviews-banner-section__container,1200,last" class="reviews-title-section__button button_dark"><span>Оставить отзыв</span></button>
+			<button data-goto=".form-section__form" data-da=".reviews-banner-section__container,1200,last" class="reviews-title-section__button button_dark"><span>Оставить отзыв</span></button>
 		</div>
 	</div>
 </section>
+
 			<div class="main__reviews-banner-section reviews-banner-section">
 	<div class="reviews-banner-section__container">
 		<div class="reviews-banner-section__slider">
@@ -318,6 +319,40 @@
 		</div>
 	</div>
 </section>
+			<div class="form-section form-section_right form-section_reviews">
+	<div class="form-section__circle-decor circle-decor"></div>
+	<div class="form-section__content">
+		<div class="form-section__form">
+			<div class="form-section__title small-title">Оставить отзыв</div>
+			<form action="#" class="form-block" id="form-block-review">
+				<div class="form-block__inputs form-inputs">
+					<div class="form-block__input form-input">
+						<input type="text" name="form-block-review-name" id="form-block-review-name" placeholder="Ваше имя">
+					</div>
+					<div class="form-block__input form-input">
+						<input type="tel" name="form-block-review-phone" id="form-block-review-phone" placeholder="Телефон">
+					</div>
+				</div>
+				<div class="form-block__textarea form-textarea">
+					<textarea name="form-block-review-textarea" id="form-block-review-textarea" placeholder="Напишите ваш отзыв"></textarea>
+				</div>
+				<div class="form-block__image-ibg form-captcha">
+					<img src="img/images/ui/aa81d37cd21ba1c1e946df044bc96f6f.png" alt="reCaptcha" width="354" height="104">
+				</div>
+				<button type="submit" class="form-block__button button"><span>Вызвать замерщика</span></button>
+				<div class="form-section__policy">
+					<span>
+						Нажимая кнопку “Вызвать замерщика”, <br>я соглашаюсь с
+						<a href="#" class="form-section__policy-link icon-arrow-more"><span>политикой персональных данных</span></a>
+					</span>
+				</div>
+			</form>
+		</div>
+		<div class="form-section__image-ibg">
+			<img src="img/images/reviews/form/1.jpg" alt="form section image" width="960" height="742">
+		</div>
+	</div>
+</div>
 			<div class="main__see-also see-also">
 	<div class="see-also__container">
 		<div class="see-also__title">Смотрите также</div>
