@@ -5886,6 +5886,11 @@ body.lock {
     min-height: 75px;
   }
 }
+@media (max-width: 767px) {
+  .about-video-section__link {
+    padding: 12px 12px 12px 13px;
+  }
+}
 .about-video-section__link::before {
   align-self: flex-end;
   margin-left: 30px;
