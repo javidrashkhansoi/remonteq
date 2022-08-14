@@ -5408,6 +5408,201 @@ body.lock {
   }
 }
 
+.reviews-title-section {
+  padding: 12px 0 0 0;
+}
+@media (max-width: 992px) {
+  .reviews-title-section {
+    padding: 25px 0 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .reviews-title-section {
+    padding: 18px 0 0 0;
+  }
+}
+@media (min-width: 1201px) {
+  .reviews-title-section__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1201px) {
+  .reviews-title-section__title {
+    margin-right: 20px;
+  }
+}
+.reviews-title-section__button {
+  --button-padding: 31px;
+}
+@media (max-width: 1200px) {
+  .reviews-title-section__button {
+    margin: 0 auto;
+  }
+}
+
+.reviews-banner-section {
+  padding: 50px 0;
+}
+@media (max-width: 992px) {
+  .reviews-banner-section {
+    padding: 35px 0;
+  }
+}
+@media (max-width: 767px) {
+  .reviews-banner-section {
+    padding: 25px 0;
+  }
+}
+.reviews-banner-section__slider {
+  margin-bottom: 28px;
+}
+@media (min-width: 1201px) {
+  .reviews-banner-section__slider {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 942px);
+    column-gap: 66px;
+    justify-content: space-between;
+  }
+  .reviews-banner-section__slider::before {
+    content: "";
+    background: url("../img/images/home/services/logo.svg") left top/contain no-repeat;
+  }
+}
+@media (max-width: 992px) {
+  .reviews-banner-section__slider {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .reviews-banner-section__slider {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1200px) {
+  .reviews-banner-section__arrows {
+    margin-bottom: 38px;
+  }
+}
+
+.slider-reviews-banner {
+  width: 100%;
+}
+.slider-reviews-banner__slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 70px 121px;
+  background: #f7f7f7;
+}
+@media (max-width: 1200px) {
+  .slider-reviews-banner__slide {
+    padding: 100px 65px;
+  }
+}
+@media (max-width: 767px) {
+  .slider-reviews-banner__slide {
+    padding: 86px 20px;
+  }
+}
+.slider-reviews-banner__slide::before {
+  position: absolute;
+  top: 33px;
+  left: 31px;
+  font-size: 25px;
+  color: #303031;
+}
+@media (max-width: 767px) {
+  .slider-reviews-banner__slide::before {
+    top: 26px;
+    left: 21px;
+  }
+}
+.slider-reviews-banner__text {
+  flex-grow: 1;
+  margin-bottom: 66px;
+  font-size: 24px;
+  line-height: 1.4583333333;
+  text-align: center;
+  color: #000000;
+}
+@media (max-width: 992px) {
+  .slider-reviews-banner__text {
+    margin-bottom: 63px;
+  }
+}
+@media (max-width: 767px) {
+  .slider-reviews-banner__text {
+    margin-bottom: 41px;
+  }
+}
+.slider-reviews-banner__images {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, 180px);
+  grid-auto-rows: 1fr;
+  row-gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+}
+.slider-reviews-banner__image-ibg {
+  padding-bottom: 138.8888888889%;
+}
+.slider-reviews-banner__image-ibg img {
+  object-fit: contain;
+}
+
+.arrows-slider-reviews-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .arrows-slider-reviews-banner {
+    justify-content: center;
+  }
+}
+.arrows-slider-reviews-banner__prev, .arrows-slider-reviews-banner__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-basis: 53px;
+  width: 53px;
+  height: 53px;
+  background: #f6f6f6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrows-slider-reviews-banner__prev:focus::before, .arrows-slider-reviews-banner__next:focus::before {
+  color: #303031;
+}
+@media (any-hover: hover) {
+  .arrows-slider-reviews-banner__prev:hover::before, .arrows-slider-reviews-banner__next:hover::before {
+    color: #303031;
+  }
+}
+.arrows-slider-reviews-banner__prev::before, .arrows-slider-reviews-banner__next::before {
+  position: relative;
+  top: 2px;
+  font-size: 10px;
+  color: #d0d0d0;
+}
+@media (any-hover: none) {
+  .arrows-slider-reviews-banner__prev::before, .arrows-slider-reviews-banner__next::before {
+    color: #303031;
+  }
+}
+.arrows-slider-reviews-banner__prev {
+  margin-right: 45px;
+  transform: rotate(90deg);
+}
+.arrows-slider-reviews-banner__next {
+  transform: rotate(-90deg);
+}
+
 .case-banner-section {
   padding: 12px 0 50px;
 }
