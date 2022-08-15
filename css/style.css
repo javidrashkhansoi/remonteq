@@ -3550,6 +3550,7 @@ body.lock {
 }
 
 .spoller-services-questions__item {
+  max-height: 5000em;
   padding: 20px 23px;
   background: #ebebeb;
   -webkit-transition: background-color 0.3s;
@@ -3581,10 +3582,22 @@ body.lock {
   line-height: 1.1666666667;
   color: #303031;
   text-align: left;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .spoller-services-questions__title.active span::after {
   height: 0;
+}
+
+.spoller-services-questions__title:focus {
+  color: #fd883f;
+}
+
+.spoller-services-questions__title:focus span::before,
+.spoller-services-questions__title:focus span::after {
+  background-color: #fd883f;
 }
 
 .spoller-services-questions__title span {
@@ -3608,6 +3621,9 @@ body.lock {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .spoller-services-questions__title span::before {
@@ -3803,6 +3819,7 @@ body.lock {
 
 .slider-reviews-banner__image-ibg {
   padding-bottom: 138.8888888889%;
+  cursor: pointer;
 }
 
 .slider-reviews-banner__image-ibg img {
@@ -4135,6 +4152,7 @@ body.lock {
 }
 
 .spoller-case-completed__item {
+  max-height: 5000em;
   padding: 19px;
   background: #ebebeb;
 }
@@ -4155,6 +4173,13 @@ body.lock {
   font-size: 18px;
   line-height: 1.2222222222;
   color: #303031;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.spoller-case-completed__title:focus {
+  color: #fd883f;
 }
 
 .spoller-case-completed__title::before {
@@ -7489,6 +7514,15 @@ body.lock {
     color: #303031;
   }
 
+  .spoller-services-questions__title:hover {
+    color: #fd883f;
+  }
+
+  .spoller-services-questions__title:hover span::before,
+  .spoller-services-questions__title:hover span::after {
+    background-color: #fd883f;
+  }
+
   .arrows-slider-services-feedback__prev:hover::before,
   .arrows-slider-services-feedback__next:hover::before {
     color: #303031;
@@ -7516,6 +7550,10 @@ body.lock {
   .arrows-slider-case-gallery__prev:hover::before,
   .arrows-slider-case-gallery__next:hover::before {
     color: #303031;
+  }
+
+  .spoller-case-completed__title:hover {
+    color: #fd883f;
   }
 
   .about-video-section__link:hover {
