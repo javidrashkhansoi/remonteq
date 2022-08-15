@@ -2518,21 +2518,26 @@ body.lock {
 }
 
 .form-calculate__range-row input[type=number] {
+  -moz-appearance: textfield;
   width: 71px;
   height: 35px;
   margin-right: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 40;
+  -webkit-text-fill-color: #ffffff;
   color: #ffffff;
   text-align: center;
   background-color: #303031;
+  -webkit-opacity: 1;
+  opacity: 1;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .form-calculate__range-row input[type=number]:focus {
+  -webkit-text-fill-color: #303031;
   color: #303031;
   background-color: #fd883f;
 }
@@ -2541,6 +2546,7 @@ body.lock {
 .form-calculate__range-row input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
+  margin: 0;
 }
 
 .form-calculate__range-row input[type=range] {
