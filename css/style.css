@@ -2602,6 +2602,7 @@ body.lock {
   height: 29px;
   background: url("../img/icons/home/calculate/slider-icon.svg") center/100% 100% no-repeat, -webkit-gradient(linear, right top, left top, color-stop(50%, #d0d0d0), color-stop(0, #303031)) center/14px 7px no-repeat;
   background: url("../img/icons/home/calculate/slider-icon.svg") center/100% 100% no-repeat, linear-gradient(to left, #d0d0d0 50%, #303031 0) center/14px 7px no-repeat;
+  outline: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
@@ -2611,6 +2612,7 @@ body.lock {
   width: 14px;
   height: 29px;
   background: url("../img/icons/home/calculate/slider-icon.svg") center/100% 100% no-repeat, linear-gradient(to left, #d0d0d0 50%, #303031 0) center/14px 7px no-repeat;
+  outline: 0;
   -moz-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
