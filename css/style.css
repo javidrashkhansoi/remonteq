@@ -301,7 +301,7 @@ body.lock {
 
 .header__search button {
   font-size: 25px;
-  color: #999;
+  color: #999999;
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
