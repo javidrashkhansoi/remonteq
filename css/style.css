@@ -328,6 +328,24 @@ body.lock {
   transition: fill 0.3s;
 }
 
+.nav-header__item_dropdown {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 13px;
+  grid-template-areas: "link arrow" "dropdown dropdown";
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+.nav-header__item_dropdown:focus .nav-header__link_dropdown {
+  color: #fd883f;
+}
+
+.nav-header__item_dropdown:focus .nav-header__dropdown-arrow::before {
+  color: #fd883f;
+}
+
 .nav-header__link {
   font-weight: 600;
   font-size: 18px;
@@ -361,6 +379,38 @@ body.lock {
   font-size: 8px;
 }
 
+.nav-header__link_dropdown {
+  grid-area: link;
+  align-self: center;
+}
+
+.nav-header__dropdown-arrow {
+  grid-area: arrow;
+  justify-self: end;
+  align-self: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav-header__dropdown-arrow.active {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.nav-header__dropdown-arrow::before {
+  font-size: 8px;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.nav-header__dropdown {
+  grid-area: dropdown;
+}
+
 .nav-header__phone {
   position: relative;
   margin-bottom: 27px;
@@ -388,6 +438,20 @@ body.lock {
 }
 
 .nav-header__phone a:focus {
+  color: #fd883f;
+}
+
+.dropdown-menu-list__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1875;
+  color: #000000;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.dropdown-menu-list__link:focus {
   color: #fd883f;
 }
 
@@ -4662,6 +4726,41 @@ body.lock {
     margin-right: 28px;
   }
 
+  .nav-header__item_dropdown:focus .nav-header__dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .nav-header__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 10;
+    min-width: 250px;
+    padding-top: 20px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .dropdown-menu-list {
+    padding: 20px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 15px rgba(153, 153, 153, 0.5);
+    box-shadow: 0 0 15px rgba(153, 153, 153, 0.5);
+  }
+
+  .dropdown-menu-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   .header-sublists {
     position: fixed;
     top: var(--scroll-y, 0);
@@ -4921,6 +5020,14 @@ body.lock {
   .about-video-section__youtube {
     max-width: 640px;
     margin: 0 auto;
+  }
+}
+
+@media (any-hover: hover) and (min-width: 993px) {
+  .nav-header__item_dropdown:hover .nav-header__dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
   }
 }
 
@@ -5749,12 +5856,37 @@ body.lock {
     display: none;
   }
 
+  .nav-header__item_dropdown {
+    grid-template-columns: 1fr 10px;
+  }
+
   .nav-header__link[data-list] {
     display: none;
   }
 
   .nav-header__link {
     color: #ffffff;
+  }
+
+  .nav-header__dropdown-arrow::before {
+    font-size: 6px;
+    color: #ffffff;
+  }
+
+  .dropdown-menu-list {
+    padding: 30px 0 4px 35px;
+  }
+
+  .dropdown-menu-list__item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .dropdown-menu-list__link {
+    color: #ffffff;
+  }
+
+  .dropdown-menu-list__link:focus {
+    color: #fd883f;
   }
 
   .header-sublists {
@@ -6187,6 +6319,10 @@ body.lock {
 }
 
 @media (max-width: 992px) and (any-hover: hover) {
+  .dropdown-menu-list__link:hover {
+    color: #fd883f;
+  }
+
   .sub-list__link:hover {
     color: #ffffff;
   }
@@ -7275,11 +7411,23 @@ body.lock {
     color: #fd883f;
   }
 
+  .nav-header__item_dropdown:hover .nav-header__link_dropdown {
+    color: #fd883f;
+  }
+
+  .nav-header__item_dropdown:hover .nav-header__dropdown-arrow::before {
+    color: #fd883f;
+  }
+
   .nav-header__link:hover {
     color: #fd883f;
   }
 
   .nav-header__phone a:hover {
+    color: #fd883f;
+  }
+
+  .dropdown-menu-list__link:hover {
     color: #fd883f;
   }
 
